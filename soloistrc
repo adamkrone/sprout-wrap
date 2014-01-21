@@ -77,8 +77,10 @@ node_attributes:
       orientation: 'bottom'
   rvm:
     rubies:
-      "ruby-2.0.0-p353" => { :command_line_options => "--verify-downloads 1" },
-      "ruby-2.1.0" => { :command_line_options => "--verify-downloads 1" }
+      ruby-2.0.0-p353:
+        command_line_options: "--verify-downloads 1"
+      ruby-2.1.0:
+        command_line_options: "--verify-downloads 1"
   workspace_directory: 'projects'
   git_projects:
     -
