@@ -32,7 +32,6 @@ recipes:
 - pivotal_workstation::github_for_mac
 - sprout-osx-apps::iterm2
 - sprout-osx-apps::adium
-- sprout-osx-apps::alfred
 - sprout-osx-apps::caffeine
 - sprout-osx-apps::ccmenu
 - sprout-osx-apps::chrome_canary
@@ -68,6 +67,7 @@ recipes:
 - sprout-osx-apps::ssh_copy_id
 - sprout-osx-apps::sublime_text
 - sprout-osx-apps::vlc
+- sprout-osx-apps::zsh
 
 - sprout-homebrew
 
