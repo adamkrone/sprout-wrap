@@ -12,61 +12,43 @@ recipes:
 - pivotal_workstation::locate_on
 - sprout-osx-settings::global_environment_variables
 
+# command line
+- sprout-osx-apps::ack
+- pivotal_workstation::tmux
+- sprout-osx-apps::ssh_copy_id
+- sprout-osx-apps::zsh
+- pivotal_workstation::oh_my_zsh
+- sprout-osx-apps::jpegoptim
+- sprout-osx-apps::s3cmd
+- sprout-osx-apps::optipng
+- sprout-osx-apps::phantomjs
+- sprout-osx-apps::siege
+
+
 # development (general)
 - sprout-osx-base::workspace_directory
-- pivotal_workstation::unix_essentials
 - pivotal_workstation::git_config_global_defaults
-
-# development (rails)
-- pivotal_workstation::rvm
-- pivotal_workstation::gem_setup
+- pivotal_workstation::composer
+- sprout-osx-apps::ctags_exuberant
+- sprout-osx-apps::erlang
+- sprout-osx-apps::hg
+- sprout-osx-apps::leiningen
+- sprout-osx-apps::rabbitmq
+- sprout-osx-apps::selenium_webdriver
+- sprout-osx-apps::solr
 - pivotal_workstation::mysql
 - pivotal_workstation::postgres
 - sprout-osx-apps::imagemagick
 - sprout-osx-apps::node_js
 - sprout-osx-apps::qt
 
-# apps
-- pivotal_workstation::bartender
-- pivotal_workstation::composer
-- pivotal_workstation::github_for_mac
+# development (rails)
+- pivotal_workstation::rvm
+- pivotal_workstation::gem_setup
+
+# misc apps
 - pivotal_workstation::screen_sharing_app
-- sprout-osx-apps::iterm2
-- sprout-osx-apps::caffeine
-- sprout-osx-apps::ccmenu
-- sprout-osx-apps::chrome_canary
-- sprout-osx-apps::ctags_exuberant
-- sprout-osx-apps::erlang
-- sprout-osx-apps::firefox_aurora
-- sprout-osx-apps::flux
-- sprout-osx-apps::heroku_toolbelt
-- sprout-osx-apps::hg
-- sprout-osx-apps::hipchat
-- sprout-osx-apps::jpegoptim
-- sprout-osx-apps::keycastr
-- sprout-osx-apps::lastpass
-- sprout-osx-apps::leiningen
-- sprout-osx-apps::macvim
-- sprout-osx-apps::menumeters
-- sprout-osx-apps::nitrous
-- sprout-osx-apps::node_js
-- sprout-osx-apps::optipng
-- sprout-osx-apps::phantomjs
-- sprout-osx-apps::rabbitmq
-- sprout-osx-apps::remote_desktop
-- sprout-osx-apps::s3cmd
-- sprout-osx-apps::selenium_webdriver
-- sprout-osx-apps::sequelpro
-- sprout-osx-apps::siege
-- sprout-osx-apps::skype
-- sprout-osx-apps::solr
-- sprout-osx-apps::sourcetree
-- sprout-osx-apps::spotify
-- sprout-osx-apps::ssh_copy_id
-- sprout-osx-apps::sublime_text
-- sprout-osx-apps::vlc
-- sprout-osx-apps::zsh
-- pivotal_workstation::oh_my_zsh
+#- sprout-osx-apps::remote_desktop
 
 - sprout-homebrew
 
@@ -74,27 +56,58 @@ node_attributes:
   rvm:
     rubies:
       ruby-2.0.0-p353:
-        command_line_options: "--verify-downloads 1"
+        command_line_options: '--verify-downloads 1'
       ruby-2.1.0:
-        command_line_options: "--verify-downloads 1"
+        command_line_options: '--verify-downloads 1'
   workspace_directory: 'projects'
-  git_projects:
-    -
-      - sprout-wrap
-      - https://github.com/adamkrone/sprout-wrap.git
   sprout:
     dock_preferences:
       orientation: 'bottom'
-    nitrous:
-      source: 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'
-      checksum: 'f16e5ce07cf97095b98253c119df3d13'
-      app: 'Nitrous\ Desktop.app'
     homebrew:
       casks:
+        - adium
+        - alfred
+        - anvil
+        - bartender
         - bettertouchtool
+        - caffeine
+        - ccmenu
+        - dash
         - dropbox
+        - evernote
         - firefox
+        - flash
+        - flux
         - google-chrome
+        - haskell-platform
+        - heroku-toolbelt
+        - hipchat
+        - imageoptim
+        - iterm2
+        - lastpass-universal
+        - libreoffice
+        - light-table
+        - limechat
+        - macvim
+        - menumeters
+        - minecraft
+        - nitrous-io
+        - opera
+        - screenflow
+        - scrivener
+        - sequel-pro
         - skype
+        - sourcetree
+        - spotify
+        - sublime-text
+        - transmit
+        - utorrent
         - vagrant
         - virtualbox
+        - vlc
+        - vmware-fusion
+        - vyprvpn
+        - wireshark
+        - xquartz
+        - xscope
+        - yubikey-personalization-gui
