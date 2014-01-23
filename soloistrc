@@ -17,10 +17,9 @@ recipes:
 - pivotal_workstation::unix_essentials
 - sprout-osx-git::git_projects
 - pivotal_workstation::git_config_global_defaults
-- sprout-osx-git::git_scripts
 
 # development (rails)
-- sprout-osx-rbenv
+- pivotal_workstation::rvm
 - pivotal_workstation::gem_setup
 - pivotal_workstation::mysql
 - pivotal_workstation::postgres
@@ -30,52 +29,67 @@ recipes:
 
 # apps
 - pivotal_workstation::screen_sharing_app
-- sprout-osx-apps::shiftit
-- pivotal_workstation::mouse_locator
-- sprout-osx-apps::menumeters
-- sprout-osx-apps::ccmenu
 - pivotal_workstation::github_for_mac
 - sprout-osx-apps::iterm2
-- sprout-osx-apps::keycastr
-
-# apps (editors)
-- sprout-osx-apps::textmate
-- sprout-osx-apps::textmate_bundles
-- sprout-osx-apps::textmate_preferences
-
-- sprout-osx-apps::macvim
+- sprout-osx-apps::adium
+- sprout-osx-apps::alfred
+- sprout-osx-apps::caffeine
+- sprout-osx-apps::ccmenu
+- sprout-osx-apps::chrome_canary
 - sprout-osx-apps::ctags_exuberant
-
-- sprout-osx-apps::rubymine
-- sprout-osx-rubymine::preferences
+- sprout-osx-apps::erlang
+- sprout-osx-apps::evernote
+- sprout-osx-apps::firefox_aurora
+- sprout-osx-apps::flux
+- sprout-osx-apps::go
+- sprout-osx-apps::heroku_toolbelt
+- sprout-osx-apps::hg
+- sprout-osx-apps::hipchat
+- sprout-osx-apps::jpegoptim
+- sprout-osx-apps::keycastr
+- sprout-osx-apps::lastpass
+- sprout-osx-apps::leiningen
+- sprout-osx-apps::macvim
+- sprout-osx-apps::menumeters
+- sprout-osx-apps::nitrous
+- sprout-osx-apps::node_js
+- sprout-osx-apps::optipng
+- sprout-osx-apps::phantomjs
+- sprout-osx-apps::rabbitmq
+- sprout-osx-apps::remote_desktop
+- sprout-osx-apps::s3cmd
+- sprout-osx-apps::selenium_webdriver
+- sprout-osx-apps::sequelpro
+- sprout-osx-apps::siege
+- sprout-osx-apps::skype
+- sprout-osx-apps::solr
+- sprout-osx-apps::sourcetree
+- sprout-osx-apps::spotify
+- sprout-osx-apps::ssh_copy_id
+- sprout-osx-apps::sublime_text
+- sprout-osx-apps::vlc
 
 - sprout-homebrew
 
 node_attributes:
-  git_pairs_domain: pivotallabs.com
-  git_pairs_authors:
-    - initials: ah
-      name: Abhijit Hiremagalur
-      shortname: abhi
-    - initials: bc
-      name: Brian Cunnie
-      shortname: cunnie
-    - initials: jrhb
-      name: Jonathan Barnes
-    - initials: lw
-      name: Luke Winikates
-      shortname: lwinikates
+  sprout:
+    dock_preferences:
+      orientation: 'bottom'
+  rvm:
+    rubies:
+      "ruby-2.0.0-p353" => { :command_line_options => "--verify-downloads 1" },
+      "ruby-2.1.0" => { :command_line_options => "--verify-downloads 1" }
+  workspace_directory: 'projects'
   git_projects:
     -
       - sprout-wrap
-      - https://github.com/pivotal-sprout/sprout-wrap.git
+      - https://github.com/adamkrone/sprout-wrap.git
   sprout:
     homebrew:
       casks:
         - bettertouchtool
         - dropbox
         - firefox
-        - gitx-rowanj
         - google-chrome
         - skype
         - vagrant
