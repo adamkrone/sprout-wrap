@@ -15,7 +15,6 @@ recipes:
 # development (general)
 - sprout-osx-base::workspace_directory
 - pivotal_workstation::unix_essentials
-- sprout-osx-git::git_projects
 - pivotal_workstation::git_config_global_defaults
 
 # development (rails)
@@ -28,19 +27,18 @@ recipes:
 - sprout-osx-apps::qt
 
 # apps
-- pivotal_workstation::screen_sharing_app
+- pivotal_workstation::bartender
+- pivotal_workstation::composer
 - pivotal_workstation::github_for_mac
+- pivotal_workstation::screen_sharing_app
 - sprout-osx-apps::iterm2
-- sprout-osx-apps::adium
 - sprout-osx-apps::caffeine
 - sprout-osx-apps::ccmenu
 - sprout-osx-apps::chrome_canary
 - sprout-osx-apps::ctags_exuberant
 - sprout-osx-apps::erlang
-- sprout-osx-apps::evernote
 - sprout-osx-apps::firefox_aurora
 - sprout-osx-apps::flux
-- sprout-osx-apps::go
 - sprout-osx-apps::heroku_toolbelt
 - sprout-osx-apps::hg
 - sprout-osx-apps::hipchat
@@ -68,13 +66,11 @@ recipes:
 - sprout-osx-apps::sublime_text
 - sprout-osx-apps::vlc
 - sprout-osx-apps::zsh
+- pivotal_workstation::oh_my_zsh
 
 - sprout-homebrew
 
 node_attributes:
-  sprout:
-    dock_preferences:
-      orientation: 'bottom'
   rvm:
     rubies:
       ruby-2.0.0-p353:
@@ -87,6 +83,12 @@ node_attributes:
       - sprout-wrap
       - https://github.com/adamkrone/sprout-wrap.git
   sprout:
+    dock_preferences:
+      orientation: 'bottom'
+    nitrous:
+      source: 'https://www.nitrous.io/mac/NitrousDesktop-latest.zip'
+      checksum: 'f16e5ce07cf97095b98253c119df3d13'
+      app: 'Nitrous\ Desktop.app'
     homebrew:
       casks:
         - bettertouchtool
