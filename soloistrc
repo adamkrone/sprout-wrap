@@ -76,7 +76,6 @@ node_attributes:
         - evernote
         - firefox
         - flash
-        - flux
         - google-chrome
         - haskell-platform
         - heroku-toolbelt
